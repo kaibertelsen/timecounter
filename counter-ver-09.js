@@ -4,6 +4,7 @@ function startdisplaytime(){
 syncdisplaytime();
 document.getElementById("livetimediv").style.display="Inline-block";
 //starte teller med oppdatering vært 10ms
+	console.log("Start interval");
 counthsekinterval = setInterval(counthsek,10);
 //
 }
@@ -11,6 +12,7 @@ counthsekinterval = setInterval(counthsek,10);
 
 function stopdisplaytime(){
 //hide
+	console.log("Stop interval");
 document.getElementById("livetimediv").style.display="none";
 	clearInterval(counthsekinterval);
 }
@@ -63,7 +65,7 @@ let msdiff = currentms-startms;
 
 function counthsek(){
 hsec++;
-
+console.log("teller",hsec);
 		if (hsec>=100){
 		hsec=0;
     syncdisplaytime();

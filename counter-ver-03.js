@@ -2,13 +2,15 @@
 function stopdisplaytime(){
 //hide
 document.getElementById("livetimediv").style.display="none";
+	clearInterval(counthsekinterval);
 }
 
 function startdisplaytime(){
 syncdisplaytime();
 document.getElementById("livetimediv").style.display="Inline-block";
 //starte teller med oppdatering vært 10ms
-setInterval(function () {counthsek()}, 10);
+counthsekinterval = setInterval(counthsek(), 10);
+//setInterval(function () {counthsek()}, 10);
 }
 
 

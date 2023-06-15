@@ -12,7 +12,6 @@ clockintervalid = setInterval(counthsek,10);
 function stopdisplaytime(){
 //hide
 console.log("Stop interval");
-document.getElementById("livetimediv").style.display="none";
 clearInterval(clockintervalid);
 }
 

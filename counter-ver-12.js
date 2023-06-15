@@ -1,5 +1,5 @@
 
-const =setInterval(counthsek,10);
+const counthsekinterval = setInterval(counthsek,10);
 function startdisplaytime(){
 syncdisplaytime();
 document.getElementById("livetimediv").style.display="Inline-block";

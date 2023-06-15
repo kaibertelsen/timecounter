@@ -9,7 +9,7 @@ function startdisplaytime(){
 syncdisplaytime();
 document.getElementById("livetimediv").style.display="Inline-block";
 //starte teller med oppdatering vært 10ms
-counthsekinterval = setInterval(counthsek(), 10);
+const counthsekinterval = setInterval(counthsek(), 10);
 //setInterval(function () {counthsek()}, 10);
 }
 

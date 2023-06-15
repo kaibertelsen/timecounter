@@ -1,12 +1,12 @@
 
-const counthsekinterval = setInterval(counthsek,10);
+
 function startdisplaytime(){
 syncdisplaytime();
 document.getElementById("livetimediv").style.display="Inline-block";
 //starte teller med oppdatering vært 10ms
 	clearInterval(counthsekinterval);
 	console.log("Start interval");
-counthsekinterval = setInterval(counthsek,1000);
+clockintervalid = setInterval(counthsek,1000);
 //
 }
 
@@ -15,7 +15,7 @@ function stopdisplaytime(){
 //hide
 	console.log("Stop interval");
 document.getElementById("livetimediv").style.display="none";
-	clearInterval(counthsekinterval);
+	clearInterval(clockintervalid);
 }
 
 

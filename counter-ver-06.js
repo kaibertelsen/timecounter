@@ -21,9 +21,9 @@ let currentms = current.getTime();
 let msdiff = currentms-startms;
 	
 	hour = Math.floor(msdiff/3600000);
+	document.getElementById("hour").innerHTML = hour;
   if(hour>0){
   document.getElementById("hourdiv").style.display="Inline-block";
-  document.getElementById("hour").innerHTML = hour;
   }
   //resterende ms til min
   var msmin = Math.floor(msdiff-hour*3600000);

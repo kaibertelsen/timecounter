@@ -4,9 +4,7 @@ function startdisplaytime(){
 syncdisplaytime();
 document.getElementById("livetimediv").style.display="Inline-block";
 //starte teller med oppdatering vært 10ms
-	clearInterval(counthsekinterval);
-	console.log("Start interval");
-clockintervalid = setInterval(counthsek,1000);
+clockintervalid = setInterval(counthsek,10);
 //
 }
 

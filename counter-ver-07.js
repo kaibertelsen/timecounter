@@ -1,17 +1,21 @@
 
+var counthsekinterval;
+function startdisplaytime(){
+syncdisplaytime();
+document.getElementById("livetimediv").style.display="Inline-block";
+//starte teller med oppdatering vært 10ms
+counthsekinterval = setInterval(function () {counthsek()}, 10);
+//
+}
+
+
 function stopdisplaytime(){
 //hide
 document.getElementById("livetimediv").style.display="none";
 	clearInterval(counthsekinterval);
 }
 
-function startdisplaytime(){
-syncdisplaytime();
-document.getElementById("livetimediv").style.display="Inline-block";
-//starte teller med oppdatering vært 10ms
-const counthsekinterval = setInterval(function () {counthsek()}, 10);
-//
-}
+
 
 
 
@@ -20,8 +24,8 @@ const current = new Date();
 let currentms = current.getTime();
 let msdiff = currentms-startms;
 	
-	hour = Math.floor(msdiff/3600000);
-	document.getElementById("hour").innerHTML = hour;
+ hour = Math.floor(msdiff/3600000);
+ document.getElementById("hour").innerHTML = hour;
   if(hour>0){
   document.getElementById("hourdiv").style.display="Inline-block";
   }

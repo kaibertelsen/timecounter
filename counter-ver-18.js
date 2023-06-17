@@ -18,6 +18,7 @@ function syncdisplaytime(){
 const current = new Date();
 let currentms = current.getTime();
 let msdiff = currentms-startms;
+totms = msdiff;
 	
 hour = Math.floor(msdiff/3600000);
 document.getElementById("hour").innerHTML = hour;
@@ -57,7 +58,9 @@ document.getElementById("hourdiv").style.display="Inline-block";
 
 
 function counthsek(){
+totms = totms+10;
 hsec++;
+	
 		if (hsec>=100){
 		hsec=0;
     syncdisplaytime();

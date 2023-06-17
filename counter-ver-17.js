@@ -1,35 +1,30 @@
 
 
 function startdisplaytime(){
+//starter tellefunksjoner
 syncdisplaytime();
 document.getElementById("livetimediv").style.display="Inline-block";
 //starte teller med oppdatering vært 10ms
 clockintervalid = setInterval(counthsek,10);
-//
 }
 
 
 function stopdisplaytime(){
-//hide
-console.log("Stop interval");
+//stopper teller
 clearInterval(clockintervalid);
 }
-
-
-
-
 
 function syncdisplaytime(){
 const current = new Date();
 let currentms = current.getTime();
 let msdiff = currentms-startms;
 	
- hour = Math.floor(msdiff/3600000);
- document.getElementById("hour").innerHTML = hour;
-  if(hour>0){
-  document.getElementById("hourdiv").style.display="Inline-block";
-  }
-  //resterende ms til min
+hour = Math.floor(msdiff/3600000);
+document.getElementById("hour").innerHTML = hour;
+if(hour>0){
+document.getElementById("hourdiv").style.display="Inline-block";
+}
+//resterende ms til min
   var msmin = Math.floor(msdiff-hour*3600000);
   min = Math.floor(msmin/60000);
   
@@ -37,7 +32,7 @@ let msdiff = currentms-startms;
   var mssec = Math.floor(msmin-(min*60000));
   sec = Math.floor(mssec/1000);
   document.getElementById("minute").innerHTML = min;
-	
+  	
   //resterende ms
   let stext = "";
   if (sec<10){

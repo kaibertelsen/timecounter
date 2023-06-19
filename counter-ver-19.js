@@ -6,12 +6,14 @@ syncdisplaytime();
 document.getElementById("livetimediv").style.display="Inline-block";
 //starte teller med oppdatering vært 10ms
 clockintervalid = setInterval(counthsek,10);
+counting=true;
 }
 
 
 function stopdisplaytime(){
 //stopper teller
 clearInterval(clockintervalid);
+counting=false;
 }
 
 function syncdisplaytime(){

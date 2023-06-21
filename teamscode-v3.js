@@ -1,6 +1,6 @@
 function syncon(){
 clearInterval(updatestatusinterval);
-updatestatusinterval = setInterval(getstatus, 5000);
+updatestatusinterval = setInterval(getstatus, syncintervall);
 sync=true;
 };
 

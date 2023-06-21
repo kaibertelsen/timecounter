@@ -7,7 +7,7 @@ sync=true;
 
 function syncoff(){
 clearInterval(updatestatusinterval);
-setTimeout(syncon, syncintervall);
+setTimeout(syncon, 5000);
 }
 
 
